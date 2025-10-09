@@ -1,0 +1,9 @@
+example
+*.out
+*.o
+build/
+bin/
+.DS_Store
+.vscode/
+.idea/
+*.log
