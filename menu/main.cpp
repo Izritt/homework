@@ -7,6 +7,21 @@
 int main() {
     std:: setlocale(LC_ALL, "");
 
+    Daniil::MenuItem study_summ = { "1 - Хочу научиться складывать!", Daniil::study_summ };
+    Daniil::MenuItem study_substract = { "2 - Хочу научиться вычитать!", Daniil::study_substract };
+    Daniil::MenuItem study_multiply = { "3 - Хочу научиться умножать!", Daniil::study_multiply };
+    Daniil::MenuItem study_divide = { "4 - Хочу научиться делить!", Daniil::study_divide };
+    Daniil::MenuItem study_go_back = { "0 - Выйти в главное меню", Daniil::study_go_back };
+
+    Daniil::MenuItem* study_children[] = {
+        &study_summ,
+        &study_substract,
+        &study_multiply,
+        &study_divide,
+        &study_go_back
+    };
+    const int study_size = sizeof(study_children) / sizeof(study_children[0]);
+
     Daniil::MenuItem study = {"1 - Хочу учиться математике!", Daniil::study};
     Daniil::MenuItem exit = {"0 - Я лучше пойду полежу...", Daniil::exit};
 
