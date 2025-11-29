@@ -1,6 +1,7 @@
 example
 *.out
 *.o
+CMakeLists.txt
 build/
 bin/
 .DS_Store
