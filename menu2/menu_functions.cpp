@@ -3,9 +3,8 @@
 #include <cstdlib>
 #include <iostream>
 
-namespace Daniil {
-    const MenuItem* display_menu(const MenuItem* current, const char* menu_title) {
-        std::cout << menu_title << std::endl;
+namespace {
+    const Daniil::MenuItem* display_menu(const Daniil::MenuItem* current) {
         for (int i = 1; i < current->children_count; i++) {
             std::cout << current->children[i]->title << std::endl;
         }
@@ -21,15 +20,18 @@ namespace Daniil {
 }
 
 const Daniil::MenuItem* Daniil::show_menu_3(const MenuItem *current) {
-    return display_menu(current, "Третий уровень:");
+    std::cout << "Третий уровень:" << std::endl;
+    return display_menu(current);
 }
 
 const Daniil::MenuItem* Daniil::show_menu_2(const MenuItem *current) {
-    return display_menu(current, "Второй уровень меню:");
+    std::cout << "Второй уровень меню:" << std::endl;
+    return display_menu(current);
 }
 
 const Daniil::MenuItem* Daniil::show_menu(const MenuItem *current) {
-    return display_menu(current, "Главное меню:");
+    std::cout << "Главное меню:" << std::endl;
+    return display_menu(current);
 }
 
 const Daniil::MenuItem* Daniil::exit(const MenuItem *current) {
